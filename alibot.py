@@ -4,9 +4,10 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
+#Your chrome driver directory
 PATH = "/home/ricardo/chromedriver"
 
-
+#Device setup
 mobile_emulation = { "deviceName": "Nexus 5" }
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
@@ -14,11 +15,13 @@ chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
 
 def bot():
 	driver = webdriver.Chrome(PATH, desired_capabilities = chrome_options.to_capabilities())
+
+	#Your promotion
 	driver.get("https://a.aliexpress.com/_mqVbrUB")
 
 	driver.implicitly_wait(10)
-	slash_button = driver.find_element_by_class_name("am-button")
-	slash_button.click()
+	slash_promotion_button = driver.find_element_by_class_name("am-button")
+	slash_promotion_button.click()
 
 	driver.implicitly_wait(10)
 	ActionChains(driver).move_to_element(slash_button).click(slash_button)
@@ -44,9 +47,8 @@ def bot():
 	complete_button = driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[1]/div/div/button')
 	complete_button.click()
 
-	ultimate_button_foda = driver.find_element_by_xpath('//*[@id="app"]/div/div[3]/div[4]/div/div/a')
-	ultimate_button_foda.click()
-
+	slash_button = driver.find_element_by_xpath('//*[@id="app"]/div/div[3]/div[4]/div/div/a')
+	slash.click()
 
 	time.sleep(3)
 	driver.close()
