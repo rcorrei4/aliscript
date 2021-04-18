@@ -17,7 +17,7 @@ choose the version corresponding to the version of your Chrome browser.
 
 ## Run
 
-Before running the script place your ChromeDriver directory on PATH variable and the SLASH IT promotion link on driver.get().
+Before running the script got to alibotp.py and place your ChromeDriver directory on PATH variable and the SLASH IT promotion link on driver.get().
 
 ~~~python3
 python3 alibot.py
