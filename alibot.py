@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
 #Your chrome driver directory
-PATH = "/home/ricardo/chromedriver"
+PATH = "/home/ricardo/Documents/Programming/Python/Projects/aliscript/chromedriver"
 
 #Device setup
 mobile_emulation = { "deviceName": "Nexus 5" }
@@ -24,7 +24,7 @@ def bot():
 	slash_promotion_button.click()
 
 	driver.implicitly_wait(10)
-	ActionChains(driver).move_to_element(slash_button).click(slash_button)
+	ActionChains(driver).move_to_element(slash_promotion_button).click(slash_promotion_button)
 
 	time.sleep(1)
 	account_link_button = driver.find_element_by_xpath('/html/body/div[5]/div[2]/div[2]/div/a')
@@ -36,11 +36,11 @@ def bot():
 	#Fill form
 	email = ''.join(random.choice(string.ascii_letters) for x in range(15))
 
-	email_input = driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[1]/div/div/div[2]/input')
+	email_input = driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[1]/div/div/div[3]/input')
 	email_input.click()
 	email_input.send_keys(email+"@gmail.com")
 
-	pass_input = driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[1]/div/div/div[3]/input')
+	pass_input = driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[1]/div/div/div[4]/input')
 	pass_input.click()
 	pass_input.send_keys(email)
 
