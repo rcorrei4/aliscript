@@ -1,5 +1,7 @@
 # Aliscript
 
+### This script is now working anymore because of the captcha protection!
+
 ## Setup
 
 I made this script to create accounts on Aliexpress and use this accounts to lower the price of a product that I wanted.
