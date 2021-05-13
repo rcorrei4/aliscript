@@ -1,6 +1,6 @@
 # Aliscript
 
-### This script is now working anymore because of the captcha protection!
+### This script is not working anymore because of the captcha protection!
 
 ## Setup
 
